@@ -1,15 +1,12 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { createStream } from '../../actions';
+import { createStream, createChat } from '../../actions';
 import StreamForm from './StreamForm';
 
 class StreamCreate extends React.Component {
   onSubmit = formValues => {
     this.props.createStream(formValues);
-  };
-
-  onSubmit = formValues => {
-    this.props.createStream(formValues);
+    this.props.createChat(this.props.currentUserId);
   };
 
   render() {
@@ -22,4 +19,12 @@ class StreamCreate extends React.Component {
   }
 }
 
-export default connect(null, { createStream })(StreamCreate);
+const mapStateToProps = state => {
+  return {
+    currentUserId: state.auth.userId
+  };
+};
+
+export default connect(mapStateToProps, { createStream, createChat })(
+  StreamCreate
+);

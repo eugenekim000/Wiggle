@@ -15,7 +15,7 @@ import Button from '@material-ui/core/Button';
 //text field
 import TextField from '@material-ui/core/TextField';
 
-import { CTX } from './store';
+import { CTX } from '../../reducers/chatReducer';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -38,8 +38,6 @@ const useStyles = makeStyles(theme => ({
 
 export default function SimplePaper() {
   const { allChats, sendChatAction, user } = React.useContext(CTX);
-  console.log(allChats);
-
   const topics = Object.keys(allChats);
 
   const [activeTopic, changeActiveTopic] = React.useState(topics[0]);

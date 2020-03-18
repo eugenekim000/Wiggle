@@ -1,26 +1,137 @@
 {
   "streams": [
     {
-      "title": "huh",
-      "description": "huh",
+      "title": "dsf",
+      "description": "asdfdasf",
+      "userId": "104217597551481124750",
       "id": 1
     },
     {
-      "title": "test2",
-      "description": "uhnyeahhhh",
+      "title": "asdf",
+      "description": "asdf",
+      "userId": "104217597551481124750",
       "id": 2
     },
     {
-      "title": "test",
-      "description": "test",
+      "title": "asdf",
+      "description": "asdf",
       "userId": "104217597551481124750",
       "id": 3
     },
     {
-      "title": "test",
-      "description": "test",
+      "title": "asdf",
+      "description": "asdf",
       "userId": "104217597551481124750",
       "id": 4
+    },
+    {
+      "title": "asdf",
+      "description": "asdf",
+      "userId": "104217597551481124750",
+      "id": 5
+    },
+    {
+      "title": "asdf",
+      "description": "asdf",
+      "userId": "104217597551481124750",
+      "id": 6
+    },
+    {
+      "title": "asdf",
+      "description": "asdf",
+      "userId": "104217597551481124750",
+      "id": 7
+    },
+    {
+      "title": "gsg",
+      "description": "sdfgsdfg",
+      "userId": "104217597551481124750",
+      "id": 8
+    },
+    {
+      "description": "adsf",
+      "title": "asdf",
+      "userId": "104217597551481124750",
+      "id": 9
+    },
+    {
+      "title": "ewr",
+      "description": "asdfasdf",
+      "userId": "104217597551481124750",
+      "id": 10
+    },
+    {
+      "title": "asdf",
+      "description": "asdfadsf",
+      "userId": "104217597551481124750",
+      "id": 11
+    }
+  ],
+  "chats": [
+    {
+      "general": [
+        {
+          "from": "aaron",
+          "msg": "hey"
+        },
+        {
+          "from": "aaron1",
+          "msg": "hey1"
+        },
+        {
+          "from": "aaron2",
+          "msg": "hey2"
+        }
+      ],
+      "id": "general"
+    },
+    {
+      "topic2": [
+        {
+          "from": "aaron",
+          "msg": "hey"
+        },
+        {
+          "from": "aaron4",
+          "msg": "hey7"
+        },
+        {
+          "from": "aaron5",
+          "msg": "hey7"
+        }
+      ],
+      "id": "test"
+    },
+    {
+      "userId": [],
+      "id": "RdW8qLz"
+    },
+    {
+      "chats": [],
+      "id": "tEwWg6N"
+    },
+    {
+      "chats": [],
+      "id": "pQSgvuF"
+    },
+    {
+      "chats": [],
+      "userId": "104217597551481124750",
+      "id": "gYvQhJe"
+    }
+  ],
+  "streams2": [
+    {
+      "userId": "104217597551481124750",
+      "id": 1
+    },
+    {
+      "userId": "104217597551481124750",
+      "id": 2
+    },
+    {
+      "userId": [],
+      "id": 3
     }
   ]
 }

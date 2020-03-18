@@ -5,7 +5,8 @@ import {
   FETCH_STREAMS,
   FETCH_STREAM,
   DELETE_STREAM,
-  EDIT_STREAM
+  EDIT_STREAM,
+  CREATE_CHAT
 } from './types';
 import streams from '../apis/streams';
 
@@ -57,4 +58,10 @@ export const deleteStream = id => async dispatch => {
 
   dispatch({ type: DELETE_STREAM, payload: id });
   history.push('/');
+};
+
+export const createChat = formValues => async (dispatch, getState) => {
+  const { userId } = getState().auth;
+  const response = await streams.post('./chats', { chats: [], userId });
+  dispatch({ type: CREATE_CHAT, payload: response.data });
 };

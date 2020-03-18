@@ -2,6 +2,9 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { fetchStream } from '../../actions';
 import flv from 'flv.js';
+import Dashboard from '../chatbox/Chatbox';
+import Store from '../../reducers/chatReducer';
+import { Link } from 'react-router-dom';
 
 class StreamShow extends React.Component {
   constructor(props) {
@@ -37,6 +40,20 @@ class StreamShow extends React.Component {
     this.player.load();
   }
 
+  renderAdmin() {
+    if (this.props.stream.userId === this.props.currentUserId) {
+      console.log(this.props);
+      return (
+        <Link
+          to={`/streams/delete/${this.props.stream.id}`}
+          className='ui button negative'
+        >
+          End Stream
+        </Link>
+      );
+    }
+  }
+
   render() {
     if (!this.props.stream) {
       return <div>Loading...</div>;
@@ -44,11 +61,15 @@ class StreamShow extends React.Component {
       const { title, description } = this.props.stream;
       return (
         <div>
+          {this.renderAdmin()}
           <div className='streaming-container'>
             <video ref={this.videoRef} style={{ width: '60%' }} controls />
           </div>
           <h1>{title}</h1>
           <h5>{description}</h5>
+          <Store>
+            <Dashboard streamId={this.props.stream.userId}></Dashboard>
+          </Store>
         </div>
       );
     }
@@ -56,6 +77,9 @@ class StreamShow extends React.Component {
 }
 
 const mapStateToProps = (state, ownProps) => {
-  return { stream: state.streams[ownProps.match.params.id] };
+  return {
+    stream: state.streams[ownProps.match.params.id],
+    currentUserId: state.auth.userId
+  };
 };
 export default connect(mapStateToProps, { fetchStream })(StreamShow);
