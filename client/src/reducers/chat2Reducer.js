@@ -1,4 +1,5 @@
 const CREATE_CHAT = 'CREATE_CHAT';
+const FETCH_CHAT = 'FETCH_CHAT';
 const initState = {
   general: [
     { from: 'aaron', msg: 'hey' },
@@ -25,6 +26,9 @@ export default (state = initState, action) => {
         ]
       };
     case CREATE_CHAT: {
+      return { ...state, [action.payload.id]: action.payload };
+    }
+    case FETCH_CHAT: {
       return { ...state, [action.payload.id]: action.payload };
     }
     default:

@@ -65,3 +65,9 @@ export const createChat = formValues => async (dispatch, getState) => {
   const response = await streams.post('./chats', { chats: [], userId });
   dispatch({ type: CREATE_CHAT, payload: response.data });
 };
+
+export const fetchChat = userId => async dispatch => {
+  const response = await streams.get(`/chats/${userId}`);
+
+  dispatch({ type: 'FETCH_CHAT', payload: response.data });
+};

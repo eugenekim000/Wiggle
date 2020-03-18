@@ -5,66 +5,6 @@
       "description": "asdfdasf",
       "userId": "104217597551481124750",
       "id": 1
-    },
-    {
-      "title": "asdf",
-      "description": "asdf",
-      "userId": "104217597551481124750",
-      "id": 2
-    },
-    {
-      "title": "asdf",
-      "description": "asdf",
-      "userId": "104217597551481124750",
-      "id": 3
-    },
-    {
-      "title": "asdf",
-      "description": "asdf",
-      "userId": "104217597551481124750",
-      "id": 4
-    },
-    {
-      "title": "asdf",
-      "description": "asdf",
-      "userId": "104217597551481124750",
-      "id": 5
-    },
-    {
-      "title": "asdf",
-      "description": "asdf",
-      "userId": "104217597551481124750",
-      "id": 6
-    },
-    {
-      "title": "asdf",
-      "description": "asdf",
-      "userId": "104217597551481124750",
-      "id": 7
-    },
-    {
-      "title": "gsg",
-      "description": "sdfgsdfg",
-      "userId": "104217597551481124750",
-      "id": 8
-    },
-    {
-      "description": "adsf",
-      "title": "asdf",
-      "userId": "104217597551481124750",
-      "id": 9
-    },
-    {
-      "title": "ewr",
-      "description": "asdfasdf",
-      "userId": "104217597551481124750",
-      "id": 10
-    },
-    {
-      "title": "asdf",
-      "description": "asdfadsf",
-      "userId": "104217597551481124750",
-      "id": 11
     }
   ],
   "chats": [
@@ -72,15 +12,15 @@
       "general": [
         {
           "from": "aaron",
-          "msg": "hey"
+          "msg": "general"
         },
         {
           "from": "aaron1",
-          "msg": "hey1"
+          "msg": "general"
         },
         {
           "from": "aaron2",
-          "msg": "hey2"
+          "msg": "general"
         }
       ],
       "id": "general"
@@ -89,35 +29,41 @@
       "topic2": [
         {
           "from": "aaron",
-          "msg": "hey"
+          "msg": "topic2"
         },
         {
           "from": "aaron4",
-          "msg": "hey7"
+          "msg": "topic2"
         },
         {
           "from": "aaron5",
-          "msg": "hey7"
+          "msg": "topic2"
         }
       ],
       "id": "test"
     },
     {
-      "userId": [],
-      "id": "RdW8qLz"
-    },
-    {
-      "chats": [],
-      "id": "tEwWg6N"
-    },
-    {
-      "chats": [],
-      "id": "pQSgvuF"
+      "chats": [
+        {
+          "from": "aaron",
+          "msg": "yahooo"
+        },
+        {
+          "from": "aaron4",
+          "msg": "yahooo"
+        },
+        {
+          "from": "aaron5",
+          "msg": "yahooo"
+        }
+      ],
+      "userId": "104217597551481124750",
+      "id": "CA5PDNO"
     },
     {
       "chats": [],
       "userId": "104217597551481124750",
-      "id": "gYvQhJe"
+      "id": "0UMlpSM"
     }
   ],
   "streams2": [

@@ -2,9 +2,6 @@ import React from 'react';
 import { Paper } from '@material-ui/core';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemText from '@material-ui/core/ListItemText';
 
 //chip
 import Chip from '@material-ui/core/Chip';
@@ -20,7 +17,10 @@ import { CTX } from '../../reducers/chatReducer';
 const useStyles = makeStyles(theme => ({
   root: {
     margin: '50px',
-    padding: theme.spacing(3, 2)
+    padding: theme.spacing(3, 2),
+    width: '30%',
+    height: 'auto',
+    float: 'left'
   },
   flex: {
     display: 'flex',
@@ -39,7 +39,6 @@ const useStyles = makeStyles(theme => ({
 export default function SimplePaper() {
   const { allChats, sendChatAction, user } = React.useContext(CTX);
   const topics = Object.keys(allChats);
-
   const [activeTopic, changeActiveTopic] = React.useState(topics[0]);
   const [textValue, changeTextValue] = React.useState('');
 
@@ -48,26 +47,11 @@ export default function SimplePaper() {
   return (
     <div>
       <Paper className={classes.root}>
-        <Typography variant='h4' component='h4'>
-          Chat app
-        </Typography>
         <Typography variant='h5' component='h5'>
           {activeTopic}
         </Typography>
         <div className={classes.flex}>
-          <div className={classes.topicsWindow}>
-            <List>
-              {topics.map(topic => (
-                <ListItem
-                  onClick={e => changeActiveTopic(e.target.innerText)}
-                  key={topic}
-                  button
-                >
-                  <ListItemText primary={topic} />
-                </ListItem>
-              ))}
-            </List>
-          </div>
+          {/*  actual chat window, need dis */}
           <div className={classes.chatWindow}>
             {allChats[activeTopic].map((chat, i) => (
               <div className={classes.flex} key={i}>

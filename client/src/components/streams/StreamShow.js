@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { fetchStream } from '../../actions';
+import { fetchStream, fetchChat } from '../../actions';
 import flv from 'flv.js';
 import Dashboard from '../chatbox/Chatbox';
 import Store from '../../reducers/chatReducer';
@@ -13,7 +13,7 @@ class StreamShow extends React.Component {
   }
   componentDidMount() {
     const { id } = this.props.match.params;
-
+    this.props.fetchChat(id);
     this.props.fetchStream(id);
     this.buildPlayer();
   }
@@ -61,15 +61,21 @@ class StreamShow extends React.Component {
       const { title, description } = this.props.stream;
       return (
         <div>
-          {this.renderAdmin()}
           <div className='streaming-container'>
-            <video ref={this.videoRef} style={{ width: '60%' }} controls />
+            <video
+              ref={this.videoRef}
+              style={{ width: '55%', float: 'left', marginTop: '50px' }}
+              controls
+            />
+            <Store>
+              <Dashboard></Dashboard>
+            </Store>
           </div>
-          <h1>{title}</h1>
-          <h5>{description}</h5>
-          <Store>
-            <Dashboard streamId={this.props.stream.userId}></Dashboard>
-          </Store>
+          <div style={{ clear: 'both' }}>
+            <h1>{title}</h1>
+            <h5>{description}</h5>
+            {this.renderAdmin()}
+          </div>
         </div>
       );
     }
@@ -82,4 +88,4 @@ const mapStateToProps = (state, ownProps) => {
     currentUserId: state.auth.userId
   };
 };
-export default connect(mapStateToProps, { fetchStream })(StreamShow);
+export default connect(mapStateToProps, { fetchStream, fetchChat })(StreamShow);
