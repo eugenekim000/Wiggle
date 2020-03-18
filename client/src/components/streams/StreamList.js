@@ -2,6 +2,8 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { fetchStreams } from '../../actions';
 import { Link } from 'react-router-dom';
+import Carousel from 'react-material-ui-carousel';
+import { Paper } from '@material-ui/core';
 
 class StreamList extends React.Component {
   componentDidMount() {
@@ -10,16 +12,18 @@ class StreamList extends React.Component {
   renderList() {
     return this.props.streams.map(stream => {
       return (
-        <div className='item' key={stream.id}>
-          {this.renderAdmin(stream)}
-          <i className='large middle aligned icon camera'></i>
-          <div className='content'>
-            <Link className='header' to={`/streams/${stream.id}`}>
-              {stream.title}
-            </Link>
-            <div className='description'>{stream.description}</div>
+        <Paper>
+          <div className='item' key={stream.id}>
+            {this.renderAdmin(stream)}
+            <i className='large middle aligned icon camera'></i>
+            <div className='content'>
+              <Link className='header' to={`/streams/${stream.id}`}>
+                {stream.title}
+              </Link>
+              <div className='description'>{stream.description}</div>
+            </div>
           </div>
-        </div>
+        </Paper>
       );
     });
   }
@@ -59,6 +63,24 @@ class StreamList extends React.Component {
         <h2>Streams</h2>
         <div className='ui celled list'>{this.renderList()}</div>
         {this.renderCreate()}
+        <Carousel>
+          {this.props.streams.map(stream => {
+            return (
+              <Paper>
+                <div className='item ui center aligned grid' key={stream.id}>
+                  {this.renderAdmin(stream)}
+                  <i className='large middle aligned icon camera'></i>
+                  <div className='content'>
+                    <Link className='header' to={`/streams/${stream.id}`}>
+                      {stream.title}
+                    </Link>
+                    <div className='description'>{stream.description}</div>
+                  </div>
+                </div>
+              </Paper>
+            );
+          })}
+        </Carousel>
       </div>
     );
   }
