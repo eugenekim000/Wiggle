@@ -18,15 +18,16 @@ class StreamList extends React.Component {
       { url: 'https://www.twitch.tv/rocketleague' }
     ];
   }
+
   componentDidMount() {
     this.props.fetchStreams();
   }
+
   renderList() {
     return this.props.streams.map(stream => {
       return (
-        <Paper>
+        <div>
           <div className='item' key={stream.id}>
-            {this.renderAdmin(stream)}
             <i className='large middle aligned icon camera'></i>
             <div className='content'>
               <Link className='header' to={`/streams/${stream.id}`}>
@@ -35,7 +36,8 @@ class StreamList extends React.Component {
               <div className='description'>{stream.description}</div>
             </div>
           </div>
-        </Paper>
+          {this.renderAdmin(stream)}
+        </div>
       );
     });
   }
@@ -72,7 +74,7 @@ class StreamList extends React.Component {
   renderFrontPage(prop) {
     return (
       <Paper>
-        <ReactPlayer url={prop.url} controls></ReactPlayer>
+        <ReactPlayer url={prop.url} key={prop.idx} controls></ReactPlayer>
       </Paper>
     );
   }
@@ -82,18 +84,11 @@ class StreamList extends React.Component {
       <div>
         <h2>Streams</h2>
         <Carousel className='carousel' autoPlay={false}>
-          {/*           {this.props.streams.map(stream => {
-            return (
-              <Paper className='scrolling-page'>
-                <div key={stream.id}>{this.renderAdmin(stream)}</div>
-                <Link to={`/streams/${stream.id}`}>{stream.title}</Link>
-              </Paper>
-            );
-          })} */}
           {this.urls.map((url, idx) => {
             return this.renderFrontPage(url, idx);
           })}
         </Carousel>
+        {this.renderList()}
         {this.renderCreate()}
       </div>
     );
