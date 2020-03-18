@@ -1,0 +1,11 @@
+.scrolling-page {
+  position: relative;
+  height: 500px;
+  overflow: hidden;
+  padding: 20px;
+  font-size: 100px;
+}
+
+.carousel {
+  height: 800px;
+}

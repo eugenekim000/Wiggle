@@ -4,8 +4,20 @@ import { fetchStreams } from '../../actions';
 import { Link } from 'react-router-dom';
 import Carousel from 'react-material-ui-carousel';
 import { Paper } from '@material-ui/core';
+import '../../styles.css';
+import ReactPlayer from 'react-player';
 
 class StreamList extends React.Component {
+  constructor() {
+    super();
+    this.urls = [
+      { url: 'https://www.twitch.tv/voyboy' },
+      { url: 'https://www.twitch.tv/tfue' },
+      { url: 'https://www.twitch.tv/mang0' },
+      { url: 'https://www.twitch.tv/nl_kripp' },
+      { url: 'https://www.twitch.tv/rocketleague' }
+    ];
+  }
   componentDidMount() {
     this.props.fetchStreams();
   }
@@ -57,30 +69,32 @@ class StreamList extends React.Component {
       );
   }
 
+  renderFrontPage(prop) {
+    return (
+      <Paper>
+        <ReactPlayer url={prop.url} controls></ReactPlayer>
+      </Paper>
+    );
+  }
+
   render() {
     return (
       <div>
         <h2>Streams</h2>
-        <div className='ui celled list'>{this.renderList()}</div>
-        {this.renderCreate()}
-        <Carousel>
-          {this.props.streams.map(stream => {
+        <Carousel className='carousel' autoPlay={false}>
+          {/*           {this.props.streams.map(stream => {
             return (
-              <Paper>
-                <div className='item ui center aligned grid' key={stream.id}>
-                  {this.renderAdmin(stream)}
-                  <i className='large middle aligned icon camera'></i>
-                  <div className='content'>
-                    <Link className='header' to={`/streams/${stream.id}`}>
-                      {stream.title}
-                    </Link>
-                    <div className='description'>{stream.description}</div>
-                  </div>
-                </div>
+              <Paper className='scrolling-page'>
+                <div key={stream.id}>{this.renderAdmin(stream)}</div>
+                <Link to={`/streams/${stream.id}`}>{stream.title}</Link>
               </Paper>
             );
+          })} */}
+          {this.urls.map((url, idx) => {
+            return this.renderFrontPage(url, idx);
           })}
         </Carousel>
+        {this.renderCreate()}
       </div>
     );
   }
