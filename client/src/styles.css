@@ -37,11 +37,22 @@
   font-weight: bolder;
 }
 
-.video-player {
-  margin: auto;
+.streaming-container {
+  margin-right: 50px;
+  background-color: transparent;
+}
+
+.stream-description {
+  margin-left: 50px;
+  margin-top: 50px;
 }
 
 #twitch-player-r1wmz {
+  margin: auto;
+  text-align: center;
+}
+
+.video-player {
   margin: auto;
   text-align: center;
 }
@@ -85,18 +96,17 @@ ui.active.dimmer {
   color: white;
 }
 
-.Blink {
-  animation: blinker 1.5s cubic-bezier(0.5, 0, 1, 1) infinite alternate;
+.user-streaming {
+  width: 55%;
+  float: right;
+  margin-top: 50px;
+  margin-right: 50px;
 }
-@keyframes blinker {
-  from {
-    opacity: 1;
+@media screen and (max-width: 679px) {
+  .user-streaming {
+    clear: both;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 10px;
   }
-  to {
-    opacity: 0;
-  }
-}
-
-.circle {
-  filter: invert(100%);
 }

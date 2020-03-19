@@ -62,16 +62,12 @@ class StreamShow extends React.Component {
       return (
         <div>
           <div className='streaming-container'>
-            <video
-              ref={this.videoRef}
-              style={{ width: '55%', float: 'left', marginTop: '50px' }}
-              controls
-            />
+            <video ref={this.videoRef} controls className='user-streaming' />
             <Store>
               <Dashboard></Dashboard>
             </Store>
           </div>
-          <div style={{ clear: 'both' }}>
+          <div className='stream-description' style={{ clear: 'both' }}>
             <h1>{title}</h1>
             <h5>{description}</h5>
             {this.renderAdmin()}

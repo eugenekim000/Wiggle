@@ -70,7 +70,7 @@ class StreamList extends React.Component {
 
   renderFrontPage(prop) {
     return (
-      <StyledPaper>
+      <StyledPaper className='video-player'>
         <ReactPlayer
           url={prop.url}
           key={prop.idx}
@@ -86,7 +86,7 @@ class StreamList extends React.Component {
       <div>
         <h1 className='banner-text'>Discover Popular Streams</h1>
 
-        <Carousel className='carousel' autoPlay={false} indicators={true}>
+        <Carousel className='carousel' autoPlay={true} indicators={true}>
           {this.urls.map((url, idx) => {
             return this.renderFrontPage(url, idx);
           })}
