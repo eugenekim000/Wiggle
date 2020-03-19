@@ -19,7 +19,7 @@ class StreamDelete extends React.Component {
           onClick={() => this.props.deleteStream(id)}
           className='ui button negative'
         >
-          Delete
+          End Stream
         </button>
         <Link to='/' className='ui button'>
           Cancel
@@ -37,7 +37,7 @@ class StreamDelete extends React.Component {
   render() {
     return (
       <Modal
-        title='Delete Stream'
+        title='End Stream'
         content={this.renderContent()}
         actions={this.renderActions()}
         onDismiss={() => history.push('/')}

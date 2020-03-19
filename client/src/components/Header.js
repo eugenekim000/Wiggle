@@ -27,7 +27,10 @@ const Header = ({ isSignedIn }) => {
   }
   function renderActions() {
     return (
-      <button onClick={() => history.push('/')} className='ui button negative'>
+      <button
+        onClick={() => setToggle(!infoToggled)}
+        className='ui button negative'
+      >
         Close
       </button>
     );
@@ -36,12 +39,32 @@ const Header = ({ isSignedIn }) => {
   function renderModal() {
     console.log('clicked');
     return (
-      <Modal
-        title='Delete Stream'
-        content={renderContent()}
-        actions={renderActions()}
-        onDismiss={() => history.push('/')}
-      />
+      <div>
+        <div className='ui secondary pointing menu'>
+          <Link
+            to='/'
+            className='item header-text'
+            style={{ color: '#a970ff' }}
+          >
+            Streamy
+          </Link>
+
+          <div className='right menu center'>
+            <i
+              className='question circle icon'
+              onClick={() => setToggle(!infoToggled)}
+            ></i>
+            {renderCreate()}
+            <GoogleAuth />
+          </div>
+        </div>
+        <Modal
+          title='Delete Stream'
+          content={renderContent()}
+          actions={renderActions()}
+          onDismiss={() => setToggle(!infoToggled)}
+        />
+      </div>
     );
   }
 
@@ -60,13 +83,7 @@ const Header = ({ isSignedIn }) => {
       </div>
     </div>
   ) : (
-    <div>
-      <i
-        class='question circle icon'
-        onClick={() => setToggle(!infoToggled)}
-      ></i>
-      {renderModal()}
-    </div>
+    <div>{renderModal()}</div>
   );
 };
 

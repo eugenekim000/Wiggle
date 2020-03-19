@@ -35,7 +35,7 @@ class StreamList extends React.Component {
     return this.props.streams.map(stream => {
       return (
         <div>
-          <div className='item' key={stream.id}>
+          <div className='eight wide column' key={stream.id}>
             <i className='large middle aligned icon camera'></i>
             <div className='content'>
               <Link className='header' to={`/streams/${stream.id}`}>
@@ -93,7 +93,7 @@ class StreamList extends React.Component {
         </Carousel>
 
         <h1>Other's Streaming Right Now:</h1>
-        {this.renderList()}
+        <div className='ui grid'>{this.renderList()}</div>
       </div>
     );
   }

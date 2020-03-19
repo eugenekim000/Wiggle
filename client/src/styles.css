@@ -54,3 +54,49 @@
   font-size: 200%;
   margin: auto;
 }
+
+.ui.modal {
+  width: 50%;
+  height: 100%;
+  padding-top: 20%;
+  background-color: transparent;
+  transition: 'scale';
+}
+
+ui.active.dimmer {
+  width: 100%;
+}
+
+.item {
+  float: left;
+}
+
+.question.circle.icon:hover {
+  filter: drop-shadow(3px 3px 3px cyan) invert(100%);
+  cursor: pointer;
+}
+
+.stream-form {
+  width: min(300px);
+  margin-left: 30px;
+}
+
+.ui.form .field > label {
+  color: white;
+}
+
+.Blink {
+  animation: blinker 1.5s cubic-bezier(0.5, 0, 1, 1) infinite alternate;
+}
+@keyframes blinker {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.circle {
+  filter: invert(100%);
+}
