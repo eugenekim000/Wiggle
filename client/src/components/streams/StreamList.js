@@ -91,6 +91,8 @@ class StreamList extends React.Component {
             return this.renderFrontPage(url, idx);
           })}
         </Carousel>
+
+        <h1>Other's Streaming Right Now:</h1>
         {this.renderList()}
       </div>
     );

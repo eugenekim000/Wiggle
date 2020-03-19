@@ -34,6 +34,7 @@
 .header-text:link {
   color: #a970ff;
   font-size: xx-large;
+  font-weight: bolder;
 }
 
 .video-player {
@@ -43,4 +44,13 @@
 #twitch-player-r1wmz {
   margin: auto;
   text-align: center;
+}
+
+.ui.button {
+  margin: 20px 5px 5px 5px;
+}
+
+.question.circle.icon {
+  font-size: 200%;
+  margin: auto;
 }
