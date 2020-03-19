@@ -6,6 +6,14 @@ import Carousel from 'react-material-ui-carousel';
 import { Paper } from '@material-ui/core';
 import '../../styles.css';
 import ReactPlayer from 'react-player';
+import { withStyles } from '@material-ui/core/styles';
+
+const StyledPaper = withStyles({
+  root: {
+    background: '#18181b',
+    margin: 'auto'
+  }
+})(Paper);
 
 class StreamList extends React.Component {
   constructor() {
@@ -60,36 +68,30 @@ class StreamList extends React.Component {
     }
   }
 
-  renderCreate() {
-    if (this.props.isSignedIn)
-      return (
-        <div style={{ textAlign: 'right' }}>
-          <Link to='/streams/new' className='ui button primary'>
-            Create Stream
-          </Link>
-        </div>
-      );
-  }
-
   renderFrontPage(prop) {
     return (
-      <Paper>
-        <ReactPlayer url={prop.url} key={prop.idx} controls></ReactPlayer>
-      </Paper>
+      <StyledPaper>
+        <ReactPlayer
+          url={prop.url}
+          key={prop.idx}
+          controls
+          className='video-player'
+        ></ReactPlayer>
+      </StyledPaper>
     );
   }
 
   render() {
     return (
       <div>
-        <h2>Streams</h2>
-        <Carousel className='carousel' autoPlay={false}>
+        <h1 className='banner-text'>Discover Popular Streams</h1>
+
+        <Carousel className='carousel' autoPlay={false} indicators={true}>
           {this.urls.map((url, idx) => {
             return this.renderFrontPage(url, idx);
           })}
         </Carousel>
         {this.renderList()}
-        {this.renderCreate()}
       </div>
     );
   }

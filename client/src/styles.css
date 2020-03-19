@@ -4,12 +4,43 @@
   overflow: hidden;
   padding: 20px;
   font-size: 100px;
+  background-color: #18181b;
 }
 
 .carousel {
   height: 500px;
+  align-items: center;
+  background-color: #18181b;
 }
-
 .streaming-container {
   background-color: black;
+}
+
+.ui-container {
+  background-color: #18181b;
+  color: white;
+}
+
+.modal {
+  background-color: #18181b;
+}
+
+.banner-text {
+  font-size: xx-large;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.header-text:link {
+  color: #a970ff;
+  font-size: xx-large;
+}
+
+.video-player {
+  margin: auto;
+}
+
+#twitch-player-r1wmz {
+  margin: auto;
+  text-align: center;
 }
