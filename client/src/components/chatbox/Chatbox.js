@@ -2,16 +2,9 @@ import React from 'react';
 import { Paper } from '@material-ui/core';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
-
-//chip
 import Chip from '@material-ui/core/Chip';
-
-//button
 import Button from '@material-ui/core/Button';
-
-//text field
 import TextField from '@material-ui/core/TextField';
-
 import { CTX } from '../../reducers/chatReducer';
 
 const useStyles = makeStyles(theme => ({

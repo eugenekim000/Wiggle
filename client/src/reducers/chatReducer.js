@@ -52,7 +52,7 @@ export default function Store(props) {
     });
   }
 
-  const user = 'Erwin' + Math.random(100).toFixed(2);
+  const user = 'User' + Math.random(100).toFixed(2);
 
   return (
     <CTX.Provider value={{ allChats, sendChatAction, user }}>
