@@ -92,8 +92,10 @@ class StreamList extends React.Component {
           })}
         </Carousel>
 
-        <h1>Other's Streaming Right Now:</h1>
-        <div className='ui grid'>{this.renderList()}</div>
+        <h1 style={{ padding: '20px' }}>Other's Streaming Right Now:</h1>
+        <div style={{ padding: '20px' }} className='ui grid'>
+          {this.renderList()}
+        </div>
       </div>
     );
   }

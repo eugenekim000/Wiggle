@@ -59,7 +59,7 @@ const Header = ({ isSignedIn }) => {
           </div>
         </div>
         <Modal
-          title='Delete Stream'
+          title='About this App'
           content={renderContent()}
           actions={renderActions()}
           onDismiss={() => setToggle(!infoToggled)}

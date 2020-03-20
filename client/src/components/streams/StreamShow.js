@@ -42,7 +42,6 @@ class StreamShow extends React.Component {
 
   renderAdmin() {
     if (this.props.stream.userId === this.props.currentUserId) {
-      console.log(this.props);
       return (
         <Link
           to={`/streams/delete/${this.props.stream.id}`}
