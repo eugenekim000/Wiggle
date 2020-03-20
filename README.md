@@ -1,6 +1,8 @@
 # Wiggle
 
 A CRUD App inspired by the popular streaming website Twitch.tv.
+![](preview1.gif)
+![](preview1.gif)
 
 ## Getting Started
 
