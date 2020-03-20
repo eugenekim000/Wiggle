@@ -2,14 +2,14 @@ const CREATE_CHAT = 'CREATE_CHAT';
 const FETCH_CHAT = 'FETCH_CHAT';
 const initState = {
   general: [
-    { from: 'aaron', msg: 'hey' },
-    { from: 'aaron1', msg: 'hey1' },
-    { from: 'aaron2', msg: 'hey2' }
+    { from: 'user', msg: 'hey' },
+    { from: 'user2', msg: 'hey1' },
+    { from: 'user3', msg: 'hey2' }
   ],
   topic2: [
-    { from: 'aaron', msg: 'hey' },
-    { from: 'aaron4', msg: 'hey7' },
-    { from: 'aaron5', msg: 'hey7' }
+    { from: 'user4', msg: 'hey' },
+    { from: 'user5', msg: 'hey7' },
+    { from: 'user6', msg: 'hey7' }
   ]
 };
 

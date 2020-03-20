@@ -23,7 +23,18 @@ const Header = ({ isSignedIn }) => {
   }
 
   function renderContent() {
-    return 'test';
+    return (
+      <>
+        <h2>
+          Stream and chat with your friends! Inspired by the popular website
+          Twitch.tv.
+        </h2>
+        <h3>
+          For instructions on setting up a stream, please refer{' '}
+          <a href='https://github.com/eugenekim000/Wiggle'> here!</a>
+        </h3>
+      </>
+    );
   }
   function renderActions() {
     return (
@@ -37,7 +48,6 @@ const Header = ({ isSignedIn }) => {
   }
 
   function renderModal() {
-    console.log('clicked');
     return (
       <div>
         <div className='ui secondary pointing menu'>
@@ -46,7 +56,7 @@ const Header = ({ isSignedIn }) => {
             className='item header-text'
             style={{ color: '#a970ff' }}
           >
-            Streamy
+            Wiggle
           </Link>
 
           <div className='right menu center'>
@@ -71,7 +81,8 @@ const Header = ({ isSignedIn }) => {
   return infoToggled ? (
     <div className='ui secondary pointing menu'>
       <Link to='/' className='item header-text' style={{ color: '#a970ff' }}>
-        Streamy
+        Wiggle
+        <i class='circle notch icon'></i>
       </Link>
       <div className='right menu center'>
         <i
