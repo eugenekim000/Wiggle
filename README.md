@@ -11,23 +11,48 @@ Clone this repository for a copy on your machine. Deployment will be available s
 This app requires the program OBS. You can download OBS for free: [here](https://obsproject.com/download/) 
 
 
-### Installing
+### Installing and Start up
 
-A step by step series of examples that tell you how to get a development env running
+A step by step to run locally:
 
-Say what the step will be
+To get started and run all necessary servers, run the following in different terminals:
+```
+cd rtmpserver
+yarn start
 
 ```
-Give the example
+```
+cd src
+yarn start
+
+```
+```
+cd api
+yarn start
+
+```
+```
+cd server
+yarn start
+
 ```
 
-And repeat
+
+
+Open OBS and click on the settings button.
+On the left handside, click stream.
+Under the service dropdown, select custom.
+In the URL field, input trmp://localhost/live.
+Under the Stream key, input the stream id found in the browser.
 
 ```
-until finished
+http://localhost:3000/streams/2
+id I would input is 2.
+
 ```
 
-End with an example of getting some data out of the system or using it for a little demo
+then on OBS, hit start streaming, and you should see your stream live!
+
 
 ## Deployment
 
