@@ -16,70 +16,19 @@
   "chats": [
     {
       "general": [
-        {
-          "from": "aaron",
-          "msg": "general"
-        },
-        {
-          "from": "aaron1",
-          "msg": "general"
-        },
-        {
-          "from": "aaron2",
-          "msg": "general"
-        }
+        { "from": "user", "msg": "hey" },
+        { "from": "user2", "msg": "hey1" },
+        { "from": "user3", "msg": "hey2" }
       ],
       "id": "general"
     },
     {
       "topic2": [
-        {
-          "from": "aaron",
-          "msg": "topic2"
-        },
-        {
-          "from": "aaron4",
-          "msg": "topic2"
-        },
-        {
-          "from": "aaron5",
-          "msg": "topic2"
-        }
+        { "from": "user4", "msg": "hey" },
+        { "from": "user5", "msg": "hey7" },
+        { "from": "user6", "msg": "hey7" }
       ],
-      "id": "test"
-    },
-    {
-      "chats": [
-        {
-          "from": "aaron",
-          "msg": "yahooo"
-        },
-        {
-          "from": "aaron4",
-          "msg": "yahooo"
-        },
-        {
-          "from": "aaron5",
-          "msg": "yahooo"
-        }
-      ],
-      "userId": "104217597551481124750",
-      "id": "CA5PDNO"
-    },
-    {
-      "chats": [],
-      "userId": "104217597551481124750",
-      "id": "0UMlpSM"
-    },
-    {
-      "chats": [],
-      "userId": "104217597551481124750",
-      "id": "NRoHOQ_"
-    },
-    {
-      "chats": [],
-      "userId": "104217597551481124750",
-      "id": "WUdK45J"
+      "id": "topic2"
     }
   ],
   "streams2": [
